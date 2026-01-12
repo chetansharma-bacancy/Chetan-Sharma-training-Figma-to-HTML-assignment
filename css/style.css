@@ -6,10 +6,10 @@
   box-sizing: border-box;
 }
 
-html {
+/* html {
   display: flex;
   justify-content: stretch;
-}
+} */
 
 body {
   font-family: "Roboto", sans-serif;
@@ -35,7 +35,7 @@ body {
   padding: 0px 15px;
   margin: 0 auto;
   width: 100%;
-  max-width: 1460px;
+  max-width: 1260px;
 }
 
 .header {
@@ -440,6 +440,7 @@ footer {
   flex-direction: column;
   gap: 16px;
   justify-content: space-between;
+  max-width: 280px;
   color: var(--secondry-color-600);
 }
 
