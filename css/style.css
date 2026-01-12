@@ -76,6 +76,11 @@ a {
   text-decoration: none;
 }
 
+ul > li:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
 #hero {
   background: url("../Assets/Images/Home Screen.jpg") no-repeat center / cover;
   min-height: 100vh;
@@ -137,6 +142,11 @@ a {
   cursor: pointer;
 }
 
+#bookNow:hover {
+  background-color: transparent;
+  color: var(--primary-color);
+}
+
 #exploreMore {
   background: transparent;
   border: 2px solid #fff;
@@ -145,6 +155,11 @@ a {
   padding: 16px 32px;
   font-size: 16px;
   cursor: pointer;
+}
+
+#exploreMore:hover {
+  background-color: var(--bg-color);
+  color: var(--primary-color);
 }
 
 #about {
@@ -214,6 +229,11 @@ a {
   cursor: pointer;
 }
 
+#readMore:hover {
+  background-color: var(--primary-color);
+  color: var(--bg-color);
+}
+
 .aboutImgDiscription {
   display: flex;
   flex-direction: column;
@@ -246,7 +266,6 @@ a {
 }
 
 #stats {
-  max-height: 119px;
   background-color: var(--primary-color);
 }
 
@@ -274,6 +293,13 @@ a {
   font-size: 42px;
 }
 
+@media (max-width: 768px) {
+  .stats {
+    flex-direction: column;
+    gap: 16px;
+  }
+}
+
 #rooms {
   height: 100%;
   background-color: var(--bg-color-100);
@@ -293,6 +319,14 @@ a {
   display: flex;
   justify-content: space-around;
   gap: 48px;
+}
+
+@media (max-width: 768px) {
+  .cardHolder {
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+  }
 }
 
 .card {
@@ -347,12 +381,16 @@ a {
 .serviceCard {
   width: 350px;
   height: 250px;
-  border: var(--secondry-color-400) solid 1px;
+  border: 1px solid var(--secondry-color-400);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 16px;
+}
+
+.serviceCard svg path {
+  fill: #ff8d41;
 }
 
 .serviceTitle {
@@ -370,8 +408,47 @@ a {
   background-color: var(--primary-color);
   color: var(--bg-color);
 }
+
 .serviceTitle.prime {
   color: var(--bg-color);
+}
+
+.serviceCard:hover {
+  background-color: var(--primary-color);
+  color: var(--bg-color);
+}
+
+.serviceCard:hover .serviceDiscription {
+  color: var(--bg-color);
+}
+
+.serviceCard:hover .serviceDiscription.prime {
+  background-color: var(--bg-color);
+  color: var(--secondry-color-600);
+}
+
+.serviceCard:hover svg path {
+  fill: white;
+}
+
+.serviceCard.prime {
+  background-color: var(--primary-color);
+  color: var(--bg-color);
+}
+
+.serviceCard.prime svg path {
+  fill: var(--bg-color);
+}
+
+.serviceCard.prime:hover {
+  background-color: var(--bg-color);
+  color: var(--primary-color);
+}
+.serviceCard.prime:hover .serviceTitle {
+  color: var(--secondry-color-900);
+}
+.serviceCard.prime:hover svg path {
+  fill: var(--primary-color);
 }
 
 #testimonials {
@@ -394,6 +471,13 @@ a {
   width: 100%;
   gap: auto;
   padding-top: 75px;
+}
+
+@media (max-width: 768px) {
+  .testmonialsCardHolder {
+    flex-direction: column;
+    gap: 32px;
+  }
 }
 
 .testimonialCard {
@@ -472,4 +556,17 @@ footer {
 .footLogo {
   margin-bottom: 8px;
   color: var(--secondry-color-900);
+}
+
+@media (max-width: 768px) {
+  .footer {
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+  }
+
+  .companyDetails {
+    align-items: center;
+    text-align: center;
+  }
 }

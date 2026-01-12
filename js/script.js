@@ -1,0 +1,1 @@
+alert("this webpage is only compatible with laptops and Desktop PC")
