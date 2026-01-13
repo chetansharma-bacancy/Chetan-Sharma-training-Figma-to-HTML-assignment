@@ -9,6 +9,7 @@
 /* html {
   display: flex;
   justify-content: stretch;
+  width: 100%;
 } */
 
 body {
@@ -60,6 +61,19 @@ span {
 .logo {
   font-weight: bold;
   font-size: 29px;
+}
+
+@media (max-width: 768px) {
+  .logo {
+    font-size: 24px;
+  }
+  .header {
+    padding: 16px 16px 0px 16px;
+    gap: 24px;
+  }
+  .header ul {
+    display: none;
+  }
 }
 
 ul {
@@ -131,6 +145,17 @@ ul > li:hover {
   gap: 16px;
 }
 
+@media (max-width: 768px) {
+  .banner {
+    padding: 0px 16px;
+  }
+  .hero-title {
+    font-size: 32px;
+  }
+  .hero-description {
+    font-size: 12px;
+  }
+}
 /* Buttons */
 #bookNow {
   background-color: var(--primary-color);
@@ -193,6 +218,12 @@ ul > li:hover {
   width: 30px;
   height: 2.5px;
   background-color: var(--secondry-color-900);
+}
+
+@media (max-width: 768px) {
+  #title {
+    font-size: 14pt;
+  }
 }
 
 .aboutOne {
@@ -274,6 +305,7 @@ ul > li:hover {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
   height: 100%;
   max-width: 1270px;
   width: 100%;
@@ -296,8 +328,17 @@ ul > li:hover {
 @media (max-width: 768px) {
   .stats {
     flex-direction: column;
-    gap: 16px;
+    width: 40%;
+    /* flex-wrap: wrap; */
+    /* row-gap: 16px; */
   }
+  .h2 {
+    font-size: 30px;
+  }
+  /* .count {
+    width: 50%;
+    margin: 0;
+  } */
 }
 
 #rooms {
@@ -560,13 +601,18 @@ footer {
 
 @media (max-width: 768px) {
   .footer {
-    flex-direction: column;
+    /* flex-direction: column; */
+    flex-wrap: wrap;
     align-items: center;
     gap: 32px;
   }
 
   .companyDetails {
-    align-items: center;
-    text-align: center;
+    /* align-items: center;
+    text-align: center; */
+  }
+
+  .quickLinks {
+    width: 40%;
   }
 }
